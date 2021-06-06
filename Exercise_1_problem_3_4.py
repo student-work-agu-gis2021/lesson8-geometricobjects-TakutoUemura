@@ -11,7 +11,7 @@
 # YOUR CODE HERE 1 to read the file
 #raise NotImplementedError()
 import pandas as pd 
-data = pd.read_csv("data/travelTimes_2015_Helsinki.txt")
+data = pd.read_csv("data/travelTimes_2015_Helsinki.txt", sep=';')
 
 #Check how many rows and columns there are:
 data
@@ -25,8 +25,7 @@ print(data.head())
 # 2: Select the 4 columns that contain coordinate information (**'from_x'**, **'from_y'**, **'to_x'**, **'to_y'**) and store them in variable **`data`** (i.e. update the data -variable  to contain only these four columns).
 # 
 
-# YOUR CODE HERE 2 to set `data`
-
+# YOUR CODE HERE 2 to set `data
 
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
