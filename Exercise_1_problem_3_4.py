@@ -26,6 +26,7 @@ print(data.head())
 # 
 
 # YOUR CODE HERE 2 to set `data
+data = data.iloc[:, 5:9]
 
 # CODE FOR TESTING YOUR SOLUTION
 print(list(data.columns))
