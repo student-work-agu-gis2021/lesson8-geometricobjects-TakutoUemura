@@ -12,6 +12,7 @@
 from shapely.geometry import Point, LineString, Polygon
 #YOUR CODE HERE 1 to define create_point_geom()
 def create_point_geom(x_coord, y_coord):
+  """This function create a shapely Point geometry object and return that."""
   point1 = Point(x_coord, y_coord)
   return point1
   
@@ -31,6 +32,7 @@ print(point1.geom_type)
 
 # YOUR CODE HERE 2 to define create_line_geom()
 def create_line_geom(points):
+  """This function create line and return line."""
   assert type(points)=="list", "Input should be a list!"
   assert len(points)>=2, "LineString object requires at least two Points!"
   line = LineString([points[0], points[1]])
@@ -72,6 +74,7 @@ except Exception as e:
 
 # YOUR CODE HERE 4 to define create_poly_geom()
 def create_poly_geom(coords):
+  """This function create and return a Polygon."""
   assert type(coords) is list, "Input should be a list!"
   assert len(coords)>=3, "Polygon object requires at least three Points!"
   for i in coords:
@@ -114,6 +117,7 @@ except Exception as e:
 
 #  YOUR CODE HERE 6 to define get_centroid()
 def get_centroid(geom):
+  """This function makes centroid."""
   assert type(geom)==Point or type(geom)==LineString or type(geom)==Polygon, "Input should be a Shapely geometry!"
   return geom.centroid
 
@@ -144,6 +148,7 @@ except Exception as e:
 
 # YOUR CODE HERE 8 to define get_area()
 def get_area(polygon):
+  """This functon create and return area."""
   assert type(polygon)==Polygon, "Input should be a Shapely Polygon -object!"
   return polygon.area
 
@@ -172,6 +177,7 @@ except Exception as e:
 
 #  YOUR CODE HERE 9 to define get_length()
 def get_length(geom):
+  """This function create and return length."""
   assert type(geom)==LineString or type(geom)==Polygon, "'geom' should be either LineString or Polygon!"
   if type(geom)==LineString:
     return geom.length
